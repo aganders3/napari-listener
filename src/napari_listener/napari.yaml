@@ -1,0 +1,4 @@
+name: napari-listener
+display_name: Napari Listener
+contributions:
+  commands:
