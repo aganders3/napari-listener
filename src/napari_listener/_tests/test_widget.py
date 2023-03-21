@@ -37,6 +37,23 @@ def test_create_socket_widget(socket_widget, qtbot):
     )
 
 
+def test_server_already_running(socket_widget, qtbot):
+    server = socket_widget.server
+    socket_widget._start_listening()
+    assert socket_widget.server is server
+
+
+def test_default_port_occupied(socket_widget, qtbot):
+    server = socket_widget.server.server_address
+    socket_widget._stop_listening()
+    s = socket.create_server(server)
+    s.listen()
+    socket_widget._start_listening()
+    assert socket_widget.server.server_address[0] == ADDRESS
+    assert socket_widget.server.server_address[1] != server[1]
+    s.close()
+
+
 def test_stop_start_listener(socket_widget, qtbot):
     socket_widget.stop_button.click()
     assert socket_widget.server is None
