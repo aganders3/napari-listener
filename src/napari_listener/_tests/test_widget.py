@@ -49,9 +49,8 @@ def test_app_model_command(dummy_action, socket_widget, qtbot):
     server = socket_widget.server.server_address
     action, button = dummy_action
     data = action.id + "\n"
-    with (
-        qtbot.waitSignal(button.clicked, timeout=10_000),
-        socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock,
-    ):
+
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.connect(server)
-        sock.sendall(data.encode())
+        with qtbot.waitSignal(button.clicked, timeout=10_000):
+            sock.sendall(data.encode())
