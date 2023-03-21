@@ -23,7 +23,7 @@ You can install `napari-listener` via [pip]:
 
 Once installed, `napari-listener` can be started from the napari > Plugins > Start Listening
 
-<img src="https://raw.githubusercontent.com/aganders3/napari-listener/main/napari-listener-demo.gif" alt="quick demo of napari-listener">
+<img src="napari-listener-demo.gif" alt="quick demo of napari-listener">
 
 ## Contributing
 
