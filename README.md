@@ -41,7 +41,7 @@ optional args). For example:
 % nc 127.0.0.1 40256 <<< "napari:open-file /path/to/local/file"
 ```
 
-<img src="napari-listener-demo.gif" alt="quick demo of napari-listener">
+<img src="https://raw.githubusercontent.com/aganders3/napari-listener/main/napari-listener-demo.gif" alt="quick demo of napari-listener">
 
 ## Contributing
 
