@@ -2,3 +2,10 @@ name: napari-listener
 display_name: Napari Listener
 contributions:
   commands:
+  - id: napari-listener.start_listening
+    title: Start Listening
+    python_name: napari_listener:SocketWidget
+    enablement: true
+  widgets:
+  - command: napari-listener.start_listening
+    display_name: Start Listening

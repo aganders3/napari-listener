@@ -13,22 +13,17 @@ Opens a socket to listen for commands to control napari from other processes.
 
 This [napari] plugin was generated with [Cookiecutter] using [@napari]'s [cookiecutter-napari-plugin] template.
 
-<!--
-Don't miss the full getting started guide to set up your new package:
-https://github.com/napari/cookiecutter-napari-plugin#getting-started
-
-and review the napari docs for plugin developers:
-https://napari.org/stable/plugins/index.html
--->
-
 ## Installation
 
 You can install `napari-listener` via [pip]:
 
     pip install napari-listener
 
+## Usage
 
+Once installed, `napari-listener` can be started from the napari > Plugins > Start Listening
 
+<img src="https://raw.githubusercontent.com/aganders3/napari-listener/main/napari-listener-demo.gif" alt="quick demo of napari-listener">
 
 ## Contributing
 
